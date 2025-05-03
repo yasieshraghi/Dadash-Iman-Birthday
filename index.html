@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تولدت مبارک ایمان جون</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      text-align: center;
+      padding: 20px;
+      color: #333;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+      color: #d94f4f;
+    }
+    p {
+      font-size: 1.3rem;
+      margin: 15px auto;
+      max-width: 600px;
+      line-height: 1.8;
+    }
+    img {
+      width: 90%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin: 20px 0;
+    }
+    .confetti {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <h1>ایمان جونم تولدت مبارک!</h1>
+  <p>
+    داداش ایمان جونم تولدت با بهترین آرزوها مبارک<br>
+    خیلی دوستت دارم<br>
+    الهی همیشه شاد و سلامت و پیروز و موفق باشی<br>
+    فدات بشم
+  </p>
+
+  <img src="photo.jpg" alt="ایمان و خانواده">
+
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
+  </audio>
+
+  <canvas class="confetti"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    const duration = 10 * 1000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 5,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+      });
+      confetti({
+        particleCount: 5,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  </script>
+</body>
+</html>
